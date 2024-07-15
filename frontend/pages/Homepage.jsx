@@ -12,7 +12,7 @@ const Homepage = () => {
 						className="mb-2"
 					/>
 
-					<h1 className="text-center">Attrapez les touuuuus</h1>
+					<h1 className="mt-3 text-center">Attrapez les touuuuus</h1>
 				</div>
 			</Container>
 		</>

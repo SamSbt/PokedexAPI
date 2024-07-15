@@ -13,22 +13,22 @@ function NavbarTop() {
 		<>
 			<Navbar expand="lg" bg="dark" variant="dark" data-bs-theme="dark">
 				<Container>
-					<Navbar.Brand className="d-flex align-items-center" as={Link} to="/">
+					<Navbar.Brand className="d-flex align-items-center logoAnimation" as={Link} to="/">
 						<Image
 							alt="Logo"
 							src="/src/assets/img/dev-freak_logo.png"
 							width="40"
 							className="d-inline-block align-top"
 						/>{" "}
-						<span className="ms-2 special-elite-regular fs-3">DevFreak</span>
+						<span className="ms-2 special-elite-regular fs-2">DevFreak</span>
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto">
-							<Nav.Link as={Link} to="/">
+							<Nav.Link className="me-2" as={Link} to="/">
 								Accueil
 							</Nav.Link>
-							<Nav.Link as={Link} to="/salulol">
+							<Nav.Link className="me-2" as={Link} to="/">
 								Salulol
 							</Nav.Link>
 
