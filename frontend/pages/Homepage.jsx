@@ -1,0 +1,22 @@
+import { Container, Image } from "react-bootstrap";
+
+const Homepage = () => {
+	return (
+		<>
+			<Container>
+				<div className="mt-5 d-flex flex-column justify-content-center align-items-center w-100">
+					<Image
+						alt="Image du pokedex"
+						src="/src/assets/img/pokedexlogo.png"
+						width="100"
+						className="mb-2"
+					/>
+
+					<h1 className="text-center">Attrapez les touuuuus</h1>
+				</div>
+			</Container>
+		</>
+	);
+};
+
+export default Homepage;

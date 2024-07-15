@@ -1,0 +1,47 @@
+// placeholder
+input::placeholder {
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-size: 0.8rem;
+}
+
+// dropdown color
+.navbar-dark {
+	.dropdown-menu {
+		background-color: #212529;
+		border-color: #fff;
+
+		.dropdown-item {
+			color: #ffffff;
+			font-size: 0.9rem;
+
+			&:hover,
+			&:focus {
+				background-color: #495057;
+			}
+		}
+	}
+}
+
+// Form size input
+.formSearch {
+	.form-control {
+		width: 200px;
+	}
+
+
+// btn color
+	.btn {
+		&.btn-outline-light {
+			&.bg-dark {
+				font-size: 0.9rem;
+
+				&:hover,
+				&:focus {
+					background-color: #495057 !important;
+					color: #fff; // Changement de la couleur du texte au survol
+				}
+			}
+		}
+	}
+}
