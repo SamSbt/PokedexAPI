@@ -1,15 +1,32 @@
 import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
-
+import "./footer.scss";
 
 function Footer(){
     return(
         <>
-        <Container>
-            <span>Réseau social 1</span>
-            <span>Réseau social 2</span>
-            <span>Réseau social 3</span>
-        </Container>
+            <footer className="">
+                <Container>
+                    <Row>
+                        <Col className="text-center">
+                            <span>Réseau 1 </span>
+                        </Col>
+                        <Col className="text-center">
+                            <span>Réseau 2 </span>
+                        </Col>
+                        <Col className="text-center">
+                            <span>Réseau 3 </span>
+                        </Col>
+                    </Row>
+                    <Row>   
+                        <Col className="text-center mt-3">
+                            <span>&copy; 2024 Pokemon DWWM</span>
+                        </Col>
+                    </Row>
+                </Container>
+            </footer>
         </>
     )
 
