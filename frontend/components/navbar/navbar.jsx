@@ -1,12 +1,8 @@
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { Image, NavDropdown } from "react-bootstrap";
+import { Button, Container, Form, Image, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import "./navbar.scss";
-import { Link } from "react-router-dom";
+
 
 function NavbarTop() {
 	return (
