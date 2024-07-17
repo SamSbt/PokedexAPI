@@ -5,13 +5,22 @@ const HomepageView = (props) => {
 	let homepageCard = props.cardInfo;
 
 	const cardDescription = homepageCard.map((cardInfo) => (
-		<Col xs={12} sm={6} md={4} lg={3} xl={3} xxl={2} key={cardInfo.id} className="d-flex justify-content-evenly">
+		<Col
+			xs={12}
+			sm={6}
+			md={4}
+			lg={3}
+			xl={3}
+			xxl={2}
+			key={cardInfo.id}
+			className="d-flex justify-content-evenly"
+		>
 			<Cards
 				to={cardInfo.name}
 				name={cardInfo.name}
 				id={cardInfo.id}
 				imageSrc={cardInfo.imgTest}
-				description={cardInfo.description}
+				summary={cardInfo.summary}
 				height={cardInfo.height}
 				weight={cardInfo.weight}
 				types={cardInfo.types}
