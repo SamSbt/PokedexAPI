@@ -5,7 +5,7 @@ const HomepageView = (props) => {
 	let homepageCard = props.cardInfo;
 
 	const cardDescription = homepageCard.map((cardInfo) => (
-		<Col xs={12} sm={6} md={6} lg={4} xl={4} xxl={3} key={cardInfo.id}>
+		<Col xs={12} sm={6} md={4} lg={3} xl={3} xxl={2} key={cardInfo.id} className="d-flex justify-content-evenly">
 			<Cards
 				to={cardInfo.name}
 				name={cardInfo.name}
@@ -21,7 +21,7 @@ const HomepageView = (props) => {
 
 	return (
 		<>
-			<Container>
+			<Container fluid className="px-5">
 				<div className="mt-5 d-flex flex-column justify-content-center align-items-center w-100">
 					<Image
 						alt="Image du pokedex"

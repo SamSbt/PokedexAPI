@@ -8,7 +8,7 @@ function NavbarTop() {
 	return (
 		<>
 			<Navbar expand="lg" bg="dark" variant="dark" data-bs-theme="dark">
-				<Container>
+				<Container fluid className="px-5">
 					<Navbar.Brand className="d-flex align-items-center logoAnimation" as={Link} to="/">
 						<Image
 							alt="Logo"

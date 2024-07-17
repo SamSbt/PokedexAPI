@@ -8,8 +8,8 @@ function Cards(props) {
 		<>
 			<Card
 				as={Link}
-				className="text-decoration-none cardStyle"
-				style={{ width: "18rem" }}
+				className="text-decoration-none mb-4 cardStyle"
+				style={{ width: "15rem" }}
 			>
 				<div className="d-flex justify-content-center mt-3 mx-3">
 					<Card.Img
