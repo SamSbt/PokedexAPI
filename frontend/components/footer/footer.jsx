@@ -7,17 +7,17 @@ import "./footer.scss";
 function Footer(){
     return(
         <>
-            <footer className="">
+            <footer className="footer">
                 <Container>
                     <Row>
                         <Col className="text-center">
-                            <span>Réseau 1 </span>
+                            <span>Sam </span>
                         </Col>
                         <Col className="text-center">
-                            <span>Réseau 2 </span>
+                            <span>Théo </span>
                         </Col>
                         <Col className="text-center">
-                            <span>Réseau 3 </span>
+                            <span>Solen </span>
                         </Col>
                     </Row>
                     <Row>   
