@@ -23,7 +23,7 @@ function Cards(props) {
 					<Card.Subtitle className="mb-2 text-muted">
 						Id: {props.id}
 					</Card.Subtitle>
-					<Card.Text>Description : {props.summary}</Card.Text>
+					<Card.Text>Cri : {props.summary}</Card.Text>
 					<Card.Text>Taille : {props.height}</Card.Text>
 					<Card.Text>Poids : {props.weight}</Card.Text>
 					<Card.Text>Type(s) : {props.types}</Card.Text>

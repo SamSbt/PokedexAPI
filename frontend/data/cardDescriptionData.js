@@ -17,16 +17,16 @@ const cardDescriptionData = [
 		summary: "T ki ?",
 		height: "10",
 		weight: "2",
-		types: "eau",
+		types: "feu combat",
 	},
 	{
 		id: 3,
 		imageSrc: imgTest,
-		name: "Who's next?",
+		name: "Henrix",
 		summary: "FEUR",
-		height: "??",
-		weight: "??",
-		types: "??",
+		height: "10",
+		weight: "2",
+		types: "psy",
 	},
 ];
 
