@@ -1,4 +1,5 @@
 import { Container, Image } from "react-bootstrap";
+import PokemonCard from "../components/card/card";
 
 const Homepage = () => {
 	return (
@@ -14,6 +15,7 @@ const Homepage = () => {
 
 					<h1 className="mt-3 text-center">Attrapez les touuuuus</h1>
 				</div>
+				<PokemonCard />
 			</Container>
 		</>
 	);
