@@ -17,7 +17,7 @@ spl_autoload_register("autoload");
 // $httpRequest = new HttpRequest();
 
     $router = new Router();
-    // $router->start();
+    $router->start();
 
 
 // $instance1 = HttpRequest::get();
