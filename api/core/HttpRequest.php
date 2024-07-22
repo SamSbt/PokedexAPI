@@ -12,10 +12,11 @@ class HttpRequest
     private static $instance = null;
 
 //*CONSTRUCTEUR
-    public function __construct(){
+    private function __construct(){
         $this->method = $_SERVER['REQUEST_METHOD'];
-        $this->routeParts = $this->parseRoute();
-        $this->queryParams = $_GET;
+        $parsed_url = parse_url(filter_var(trim($_SERVER['REQUEST_URI'], "/"), FILTER_SANITIZE_URL));
+        $this->routeParts = explode("/", $parsed_url["path"]);
+        parse_str($parsed_url["query"] ?? "", $this->queryParams);
         $this->body = $this->parseBody();
     }
 
@@ -46,27 +47,52 @@ class HttpRequest
         return $this->body;
     }
 
-
-//*ANALYSER LES DIFFÉRENTES PARTIES DE LA ROUTE
-    private function parseRoute(){
-        $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-        $route = trim($uri, '/');
-        $routeParts = explode('/', $route);
-        return $routeParts;
-    }
-
 //*ANALYSER LE BODY CONTENU DANS LA REQUÊTE
 
     private function parseBody(){
+        //Initialisation d'un tableau vide $body qui sera utilisé pour stocker les données du corps de la requête.
         $body = [];
-
+        //'SWITCH' vérifie la méthode HTTP, si la méthode est POST ou PUT, le bloc de code correspondant est exécuté.
         switch ($this->method) {
             case 'POST' : 
             case 'PUT' : 
-                parse_str(file_get_contents('php://input'), $body);
+                //Permet d'obtenir les données envoyées par le client.
+                $input = file_get_contents('php://input');
+                //On récupère le type de contenu de la requête HTTP depuis la superglobale $_SERVER. Si CONTENT_TYPE n'est pas défini, une chaîne vide est utilisée par défaut.
+                $contentType = $_SERVER['CONTENT_TYPE'] ?? '';
+
+                //Traitement des Données en Fonction du Type de Contenu
+                if (strpos($contentType, 'application/json') !== false) {
+                    $body = json_decode($input, true);
+                } else {
+                    parse_str($input, $body);
+                }
                 break;
         }
         return $body;
     }
+    public static function get(HttpReqAttr $option = HttpReqAttr::INSTANCE)
+    {
+        if(is_null(self::$instance)){
+            self::$instance = new HttpRequest();
+        }
+        if ($option == HttpReqAttr::INSTANCE) {
+            return self::$instance;
+        }
+        return self::$instance->{$option->value};
+    }
 
 }
+
+//*Déclaration de l'énumération
+//type de l"énumération (ici string)
+enum HttpReqAttr: string
+{
+//Les différentes cases définies dans l'énumération HttpReqAttr sont :
+case INSTANCE = "instance";
+case METHOD = "method";
+case ROUTE = "route";
+case PARAMS = "params";
+case BODY = "body";
+}
+
