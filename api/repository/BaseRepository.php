@@ -6,7 +6,7 @@ class BaseRepository
   protected function connect(): PDO
   {
     if (self::$connection == null) {
-      include_once "../config/db.config.php";
+      include_once "../configs/db.config.php";
       $dsn = "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME;
       $user = DB_USER;
       $pass = DB_PASSWORD;

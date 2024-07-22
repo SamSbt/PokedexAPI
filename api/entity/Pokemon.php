@@ -2,7 +2,7 @@
 
 namespace Entity;
 
-class Pokemon 
+class Pokemon extends BaseEntity
 {
   public int $id_pokemon;
   public ?string $name;
@@ -11,8 +11,4 @@ class Pokemon
   public ?string $summary;
   public ?string $img_src;
 
-  // public function __construct(array $data = [])
-  // {
-  //   parent::__construct($data);
-  // }
 }
