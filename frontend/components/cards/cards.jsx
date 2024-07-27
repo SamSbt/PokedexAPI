@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -15,7 +17,7 @@ function Cards(props) {
 					<Card.Img
 						variant="top"
 						src="/src/assets/img/dev-freak_logo.png"
-						alt={props.name}
+						alt={"Image du Pokemon " + props.name}
 					/>
 				</div>
 				<Card.Body>
@@ -32,4 +34,16 @@ function Cards(props) {
 		</>
 	);
 }
+
+Cards.propTypes = {
+	pokemon: PropTypes.shape({
+		id_pokemon: PropTypes.number.isRequired,
+		name: PropTypes.string,
+		height: PropTypes.float,
+		weight: PropTypes.float,
+		summary: PropTypes.string,
+		img_src: PropTypes.string,
+	}),
+};
+
 export default Cards;
