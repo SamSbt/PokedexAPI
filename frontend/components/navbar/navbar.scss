@@ -1,19 +1,6 @@
-// dropdown color
-.navbar-dark {
-	.dropdown-menu {
-		background-color: #212529;
-		border-color: #fff;
-
-		.dropdown-item {
-			color: #ffffff;
-			font-size: 0.9rem;
-
-			&:hover,
-			&:focus {
-				background-color: #495057;
-			}
-		}
-	}
+//souligner le lien actif
+.nav-link.active {
+	text-decoration: underline;
 }
 
 // Form size input
@@ -57,8 +44,6 @@ input::placeholder {
     cursor: pointer;
 }
 }
-
-
 @keyframes shaking {
     0% {
         transform: translate(0, 0) rotate(0deg);

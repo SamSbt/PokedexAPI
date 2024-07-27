@@ -2,14 +2,18 @@
 
 namespace Entity;
 
+#[\AllowDynamicProperties]
+
 class BaseEntity
 {
-  public function __construct(array $data = [])
+  function __construct($fields = [])
   {
-    foreach ($data as $key => $value) {
+    $pk = "id_" . lcfirst(str_replace("Entity\\", "", get_called_class()));
+    $this->{$pk} = 0;
+    foreach ($fields as $k => $v) {
       // Vérifie si la propriété existe dans la classe
-      if (property_exists($this, $key)) {
-        $this->$key = $value;
+      if (property_exists($this, $k)) {
+        $this->{$k} = $v;
       }
     }
   }
