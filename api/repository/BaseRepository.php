@@ -43,6 +43,7 @@ class BaseRepository
   {
     $statement = $this->connect()->prepare($sql);
     $result = $statement->execute($params);
+    // var_dump($result);
     return (object)['result' => $result, 'statement' => $statement];
   }
   // récupérer valeurs table/entities ici
@@ -61,8 +62,10 @@ class BaseRepository
   }
   public function getAllPokemons(): array
   {
-    $queryResponse = $this->preparedQuery("SELECT * FROM " . $this->getTableName());
+    $tableName = $this->getTableName();
+    $queryResponse = $this->preparedQuery("SELECT * FROM " . $tableName);
     $entities = $queryResponse->statement->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $this->getEntityClassName());
+    // var_dump($entities);
     return $entities;
   }
   // FETCH_PROPS_LATE permet que constructeur soit exécuté avant affectation des valeurs en DB
@@ -78,6 +81,7 @@ class BaseRepository
     $entity = new $entityClassName($assocArray);
     return $entity;
   }
+
   public function insert(): BaseEntity | false
   {
     $tableName = $this->getTableName();

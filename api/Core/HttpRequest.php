@@ -18,7 +18,7 @@ class HttpRequest
     $this->route = explode('/', $parsed_url['path']);
     parse_str($parsed_url['query'] ?? "", $this->params);
     $this->body = filter_var_array(json_decode(file_get_contents('php://input'), true) ?? [], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    var_dump($this);
+    // var_dump($this);
   }
   public static function get(HttpReqAttr $option = HttpReqAttr::INSTANCE): string | array | HttpRequest
   {
