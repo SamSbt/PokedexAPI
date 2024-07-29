@@ -1,5 +1,4 @@
 import { Button, Modal, Form } from "react-bootstrap";
-import { useState } from "react";
 
 function Contact({ show, handleClose }) {
 

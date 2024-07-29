@@ -1,6 +1,7 @@
 import { Container, Image, Row, Col } from "react-bootstrap";
 import Cards from "../components/cards/cards";
 import { useEffect, useState } from "react";
+import Header from "../components/header/header";
 
 const Homepage = () => {
 	const [data, setData] = useState([]);
@@ -65,16 +66,7 @@ const Homepage = () => {
 	return (
 		<>
 			<Container fluid className="px-5">
-				<div className="mt-5 d-flex flex-column justify-content-center align-items-center w-100">
-					<Image
-						alt="Image du pokedex"
-						src="/src/assets/img/pokedexlogo.png"
-						width="100"
-						className="mb-2"
-					/>
-					<h1 className="mt-3 text-center">Attrapez les touuuuus</h1>
-				</div>
-
+				<Header />
 				{loading && (
 					<p className="col-12 text-center mt-5">Chargement des données...</p>
 				)}
