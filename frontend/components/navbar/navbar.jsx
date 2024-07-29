@@ -10,9 +10,9 @@ function NavbarTop() {
 
 const handleNavLinkClick = (e) => {
 	// e.preventDefault();
-	console.log("href=" + e.target.href);
+	// console.log("href=" + e.target.href);
 	const url = new URL(e.target.href);
-	console.log("path=" + url.pathname);
+	// console.log("path=" + url.pathname);
 	setActiveLink(url.pathname);
 }
 
@@ -21,7 +21,7 @@ const handleNavLinkClick = (e) => {
 			<Navbar expand="lg" bg="dark" variant="dark" data-bs-theme="dark">
 				<Container fluid className="px-5">
 					<Navbar.Brand
-						className="d-flex align-items-center logoAnimation"
+						className="d-flex align-items-center logo-animation"
 						as={Link}
 						to="/"
 					>
@@ -62,7 +62,7 @@ const handleNavLinkClick = (e) => {
 							</Nav.Link>
 						</Nav>
 
-						<Form className="d-flex formSearch" role="search" id="searchForm">
+						<Form className="d-flex form-search" role="search" id="searchForm">
 							<input
 								className="form-control me-2"
 								type="search"

@@ -7,7 +7,7 @@ const CreateScreen = () => {
 			<Container fluid className="px-5">
 				<Header />
 				<Row className="mt-5 text-center">
-					<h2>Ceci est ma page Create.</h2>
+					<h4>Ceci est ma page Create.</h4>
 				</Row>
 			</Container>
 		</>

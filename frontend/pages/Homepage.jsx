@@ -1,7 +1,8 @@
-import { Container, Image, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import Header from "../components/header/header";
 import Cards from "../components/cards/cards";
 import { useEffect, useState } from "react";
-import Header from "../components/header/header";
+
 
 const Homepage = () => {
 	const [data, setData] = useState([]);

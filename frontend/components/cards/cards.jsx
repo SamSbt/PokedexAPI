@@ -19,6 +19,7 @@ function Cards(props) {
 		showCreatedAt = true,
 		showUpdatedAt = true,
 	} = props;
+	
 	return (
 		<>
 			<Card
