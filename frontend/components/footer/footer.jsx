@@ -1,11 +1,12 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+
 function Footer() {
-	
+
 	return (
 		<>
-			<footer className="bg-dark">
+			<footer className="bg-dark mt-4">
 				<Container fluid className="px-5">
 					<Row>
 						<Col md={3}></Col>
@@ -45,12 +46,11 @@ function Footer() {
 							</Row>
 						</Col>
 						<Col md={3} className="d-flex justify-content-end">
-							<Link
-								as={Button}
-								className="nav-link my-3 p-2 border border-1 border-light rounded-2"
+							<Button
+								className="my-3 p-2 btn btn-outline-light bg-dark"
 							>
 								Contact
-							</Link>
+							</Button>
 						</Col>
 					</Row>
 				</Container>
