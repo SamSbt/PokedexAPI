@@ -1,19 +1,10 @@
-import { Container, Image } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const Homepage = () => {
 	return (
 		<>
 			<Container>
-				<div className="mt-5 d-flex flex-column justify-content-center align-items-center w-100">
-					<Image
-						alt="Image du pokedex"
-						src="/src/assets/img/pokedexlogo.png"
-						width="100"
-						className="mb-2"
-					/>
-
-					<h1 className="mt-3 text-center">Attrapez les touuuuus</h1>
-				</div>
+				<h4 className="mt-5 text-center">Ceci est ma homepage.</h4>
 			</Container>
 		</>
 	);

@@ -6,10 +6,10 @@ const Routing = () => {
     <>
     <Routes>
         <Route path="/" element={<Homepage />}/>
-        {/* <Route path="/search" element={<SearchScreen />} />
-        <Route path="/cookbook" element={<CookbookScreen />} />
-        <Route path="/planner" element={<MenusScreen />} />
-        <Route path="/groceries" element={<GroceriesScreen />} /> */}
+        {/* <Route path="/" element={<xxx />} />
+        <Route path="/" element={<xxx />} />
+        <Route path="/" element={<xxx />} />
+        <Route path="/" element={<xxx />} /> */}
     </Routes>
     </>
     );

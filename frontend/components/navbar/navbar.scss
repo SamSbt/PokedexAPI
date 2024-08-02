@@ -1,64 +1,25 @@
-// dropdown color
-.navbar-dark {
-	.dropdown-menu {
-		background-color: #212529;
-		border-color: #fff;
-
-		.dropdown-item {
-			color: #ffffff;
-			font-size: 0.9rem;
-
-			&:hover,
-			&:focus {
-				background-color: #495057;
-			}
-		}
-	}
+//souligner le lien actif
+.nav-link.active {
+	text-decoration: underline;
 }
 
 // Form size input
-.formSearch {
+.form-search {
 	.form-control {
 		width: 200px;
 		background-color: #000;
 		border-color: #fff;
 	}
-
-// placeholder
-input::placeholder {
-	font-family: "Poppins", sans-serif;
-	font-weight: 300;
-	font-size: 0.8rem;
-	color: #fff;
 }
-
-// btn color
-	.btn {
-		&.btn-outline-light {
-			&.bg-dark {
-				font-size: 0.9rem;
-
-				&:hover,
-				&:focus {
-					background-color: #495057 !important;
-					color: #fff; // Changement de la couleur du texte au survol
-				}
-			}
-		}
-	}
-}
-
 
 // animation logo
-.logoAnimation {
+.logo-animation {
 	img:hover {
     animation: shaking 0.4s infinite;
     visibility: visible;
     cursor: pointer;
 }
 }
-
-
 @keyframes shaking {
     0% {
         transform: translate(0, 0) rotate(0deg);

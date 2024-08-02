@@ -1,9 +1,10 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 
 import NavbarTop from "../components/navbar/navbar";
 import Routing from "./Routes";
-
-import "./assets/styles/App.scss";
+import Footer from "../components/footer/footer";
+import Header from "../components/header/header";
 
 function App() {
 	return (
@@ -11,11 +12,11 @@ function App() {
 			<Container fluid className="g-0">
 				<div className="wrapper">
 					<NavbarTop />
-					{/* header si besoin */}
+					<Header />
 					<main>
 						<Routing />
 					</main>
-					{/* footer si besoin */}
+					<Footer />
 				</div>
 			</Container>
 		</>
